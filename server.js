@@ -10,7 +10,7 @@ app.use(express.json());
 app.get('/api', (req, res) => {
     const baseURL = 'https://data.princegeorgescountymd.gov/resource/wb4e-w4nf.json';
     fetch(baseURL)
-      .then((r) => r.json())
+      .then((res) => res.json())
       .then((data) => {
         console.log(data);
         res.send({ data: data });

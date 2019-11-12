@@ -3,6 +3,19 @@ import "../css/styles.css";
 
 class Home extends React.Component{
 
+  constructor(){
+    super();
+    this.state = {
+      data: []
+    }
+  }
+
+  componentDidMount(){
+    fetch("/api")
+      .then(res => res.json())
+      .then(data => this.setState(data, ()=>console.log('Data fetched...', data)));
+  }
+
   render(){
     return(
       /* Jumbotron here */
