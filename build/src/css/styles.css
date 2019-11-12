@@ -1,0 +1,75 @@
+/* Jumbotron start */
+.main {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+    url(../static/police-crime-background1.jpg) no-repeat 50% 50% !important;
+    background-size: cover !important;
+    position: relative;
+}
+
+.main.segment{
+    min-height: 60vh;
+}
+
+.masthead p.ui.header {
+    margin-top: 12em;
+    margin-bottom: 0em;
+    font-size: 95%;
+    font-weight: normal;
+    color: white;
+    text-align: left;
+}
+
+.masthead h1.ui.header {
+    font-size: 2em;
+    color: white;
+    text-align: left;
+}
+
+/* Jumbotron end */
+
+/* Navbar start */
+.pointing.menu{
+    margin-bottom: 0em;
+}
+
+.pg-logo {
+    color: white;
+    margin-top: 1em;
+}
+/* Navbar end */
+
+/* Home Page start */
+.home {
+    padding-top: 8em;
+}
+
+.home p {
+    padding-bottom: 5em;
+}
+/* Home Page end */
+
+/* About Page start */
+
+/* About Page end */
+
+/* Documentation Page start */
+
+/* Documentation Page end */
+
+/* Shared start */
+.title {
+    padding-top: 2em;
+    font-size: 2em;
+}
+
+.paragraph {
+    font-family: 'Oxygen', sans-serif;
+    font-size: 1.5em;
+}
+
+.header {
+    font-family: 'Viga', sans-serif;
+    font-size: 1.5em;
+    letter-spacing: 1px;
+}
+/* Shared end */

@@ -1,9 +1,9 @@
 import React from 'react';
 import {BrowserRouter, Route} from 'react-router-dom';
 import Navbar from "./Navbar";
-import Home from "../pages/Home";
-import About from "../pages/About";
-import Documentation from "../pages/Documentation";
+import Home from "./Home";
+import About from "./About";
+import Documentation from "./Documentation";
 
 const App = () => {
     return (
