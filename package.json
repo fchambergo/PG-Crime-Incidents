@@ -1,0 +1,11 @@
+{
+  "name": "pg-crime-incidents",
+  "version": "1.0.0",
+  "description": "PG Crime Incidents Boilerplate Express and React",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Group 7",
+  "license": "ISC"
+}
