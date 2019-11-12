@@ -10,6 +10,7 @@ class Home extends React.Component{
     }
   }
 
+  /* Call API from back-end */
   componentDidMount(){
     fetch("/api")
       .then(res => res.json())
