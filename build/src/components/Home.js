@@ -53,7 +53,7 @@ class Home extends React.Component{
           </div>
 
         {/*Graph here*/}
-        <Graph2017/>
+        <Graph2017 json={this.state.data}/>
 
 
         </div>

@@ -41,6 +41,9 @@ class Graph2017 extends React.Component {
 			<CanvasJSChart options = {options} 
                 /* onRef={ref => this.chart = ref} */
             />
+            {/* <p>
+                {this.props.json.map(d => <div>{d.date}</div>)}
+            </p> */}
 			{/*You can get reference to the chart instance as shown above using onRef. This allows you to access all chart properties and methods*/}
 		</div>
 		);
