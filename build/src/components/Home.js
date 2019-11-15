@@ -1,4 +1,5 @@
 import React from 'react';
+import Graph2017 from './Graph2017';
 import "../css/styles.css";
 
 class Home extends React.Component{
@@ -16,6 +17,12 @@ class Home extends React.Component{
       .then(res => res.json())
       .then(data => this.setState(data, ()=>console.log('Data fetched...', data)));
   }
+
+  // outputData(data){
+  //   let result = data.find((i) => i.date.startsWith("2018"));
+  //   console.log(result);
+  // }
+
 
   render(){
     return(
@@ -46,7 +53,7 @@ class Home extends React.Component{
           </div>
 
         {/*Graph here*/}
-
+        <Graph2017/>
 
 
         </div>
