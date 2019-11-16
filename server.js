@@ -19,7 +19,6 @@ app.get('/api', (req, res) => {
     fetch(baseURL)
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         res.send({ data: data });
       })
       .catch((err) => {

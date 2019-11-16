@@ -6,32 +6,60 @@ var CanvasJSChart = CanvasJSReact.CanvasJSChart;
 class Graph2017 extends React.Component {
 
     render() {
+
+        /* Filter data for crime incidents that happened in September */
+        const september = this.props.json.filter(e=>new Date(e.date).getMonth() === 8);
+
+        /* Multiple variable assignment for counters of crime incidents */
+        let accident, assault, auto, be, homicide, robbery, sexOffense, theft, vandalism;
+        accident = assault = auto = be = homicide = robbery = sexOffense = theft = vandalism = 0;
+
+        /* Find total of each crime incident in data */
+        september.forEach(function(item){
+            if(item.clearance_code_inc_type.startsWith("ACCIDENT")){
+                accident += 1;
+            } else if (item.clearance_code_inc_type.startsWith("ASSAULT")){
+                assault += 1;
+            } else if (item.clearance_code_inc_type.startsWith("AUTO")){
+                auto += 1;
+            } else if (item.clearance_code_inc_type.startsWith("B & E")){
+                be += 1;
+            } else if (item.clearance_code_inc_type.startsWith("HOMICIDE")){
+                homicide += 1;
+            } else if (item.clearance_code_inc_type.startsWith("ROBBERY")){
+                robbery += 1;
+            } else if (item.clearance_code_inc_type.startsWith("SEX")){
+                sexOffense += 1;
+            } else if (item.clearance_code_inc_type.startsWith("THEFT")){
+                theft += 1;
+            } else if (item.clearance_code_inc_type.startsWith("VANDALISM")){
+                vandalism += 1;
+            }
+        });
+
+        /* Canvas JS Graph variables */
 		const options = {
 			animationEnabled: true,
 			exportEnabled: true,
-			theme: "light2", //"light1", "dark1", "dark2"
+			theme: "light2", //"light1", "light2", "dark1", "dark2"
 			title:{
-				text: "Simple Column Chart with Index Labels"
+				text: "Crime Incidents in September 2019"
 			},
 			data: [{
-				type: "column", //change type to bar, line, area, pie, etc
+				type: "column", //change type to bar, line, area, pie, column etc
 				//indexLabel: "{y}", //Shows y value on all Data Points
 				indexLabelFontColor: "#5A5757",
 				indexLabelPlacement: "outside",
 				dataPoints: [
-					{ x: 10, y: 71 },
-					{ x: 20, y: 55 },
-					{ x: 30, y: 50 },
-					{ x: 40, y: 65 },
-					{ x: 50, y: 71 },
-					{ x: 60, y: 68 },
-					{ x: 70, y: 38 },
-					{ x: 80, y: 92, indexLabel: "Highest" },
-					{ x: 90, y: 54 },
-					{ x: 100, y: 60 },
-					{ x: 110, y: 21 },
-					{ x: 120, y: 49 },
-					{ x: 130, y: 36 }
+					{ label: "ACCIDENT", y: accident },
+					{ label: "ASSAULT", y: assault },
+					{ label: "AUTO", y: auto },
+                    { label: "B&E", y: be },
+                    { label: "HOMICIDE", y: homicide},
+					{ label: "ROBBERY", y: robbery },
+					{ label: "SEX OFFENSE", y: sexOffense },
+					{ label: "THEFT", y: theft },
+					{ label: "VANDALISM", y: vandalism }
 				]
 			}]
 		}
@@ -41,9 +69,6 @@ class Graph2017 extends React.Component {
 			<CanvasJSChart options = {options} 
                 /* onRef={ref => this.chart = ref} */
             />
-            {/* <p>
-                {this.props.json.map(d => <div>{d.date}</div>)}
-            </p> */}
 			{/*You can get reference to the chart instance as shown above using onRef. This allows you to access all chart properties and methods*/}
 		</div>
 		);
