@@ -14,6 +14,7 @@ class Graph2017 extends React.Component {
         let accident, assault, auto, be, homicide, robbery, sexOffense, theft, vandalism;
         accident = assault = auto = be = homicide = robbery = sexOffense = theft = vandalism = 0;
 
+        /* Regex match string: ^[A-Z]+ */
         /* Find total of each crime incident in data */
         september.forEach(function(item){
             if(item.clearance_code_inc_type.startsWith("ACCIDENT")){
@@ -39,6 +40,7 @@ class Graph2017 extends React.Component {
 
         /* Canvas JS Graph variables */
 		const options = {
+            height: 500,
 			animationEnabled: true,
 			exportEnabled: true,
 			theme: "light2", //"light1", "light2", "dark1", "dark2"
