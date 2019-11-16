@@ -50,10 +50,10 @@ class Home extends React.Component{
           officia deserunt mollit anim id est laborum.
           </p>
 
-          <div className="ui three years item menu">
-            <a href="/#" className="item paragraph" onClick={this.toggleGraph}>2017</a>
-            <a href="/#" className="item paragraph">2018</a>
-            <a href="/#" className="item paragraph">2019</a>
+          <div className="three ui buttons">
+            <button className="massive ui button paragraph" onClick={this.toggleGraph}>2017</button>
+            <button className="massive ui button paragraph">2018</button>
+            <button className="massive ui button paragraph">2019</button>
           </div>
 
         {/*Graph here*/}
