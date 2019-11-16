@@ -7,8 +7,18 @@ class Home extends React.Component{
   constructor(){
     super();
     this.state = {
-      data: []
+      data: [],
+      show: false
+      // month: "",
+      // month_int: 0
     }
+
+    this.toggleGraph = this.toggleGraph.bind(this)
+  }
+
+  toggleGraph(){
+    const {show} = this.state;
+    this.setState({ show: !show })
   }
 
   /* Call API from back-end */
@@ -17,12 +27,6 @@ class Home extends React.Component{
       .then(res => res.json())
       .then(data => this.setState(data, ()=>console.log('Data fetched...', data)));
   }
-
-  // outputData(data){
-  //   let result = data.find((i) => i.date.startsWith("2018"));
-  //   console.log(result);
-  // }
-
 
   render(){
     return(
@@ -47,13 +51,13 @@ class Home extends React.Component{
           </p>
 
           <div className="ui three years item menu">
-            <a href="/#" className="item paragraph">2017</a>
+            <a href="/#" className="item paragraph" onClick={this.toggleGraph}>2017</a>
             <a href="/#" className="item paragraph">2018</a>
             <a href="/#" className="item paragraph">2019</a>
           </div>
 
         {/*Graph here*/}
-        <Graph2017 json={this.state.data}/>
+        { this.state.show && <Graph2017 json={this.state.data}/> }
 
 
         </div>
