@@ -18,7 +18,7 @@ class Home extends React.Component{
 
   toggleGraph(){
     const {show} = this.state;
-    this.setState({ show: !show })
+    this.setState({ show: true })
   }
 
   /* Call API from back-end */
