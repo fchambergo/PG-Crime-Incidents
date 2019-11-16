@@ -1,5 +1,5 @@
 import React from 'react';
-import Graph2017 from './Graph2017';
+import Graph from './Graph';
 import "../css/styles.css";
 
 class Home extends React.Component{
@@ -8,9 +8,9 @@ class Home extends React.Component{
     super();
     this.state = {
       data: [],
-      show: false
-      // month: "",
-      // month_int: 0
+      show: false,
+      month: "",
+      month_num: 0
     }
 
     this.toggleGraph = this.toggleGraph.bind(this)
@@ -51,13 +51,31 @@ class Home extends React.Component{
           </p>
 
           <div className="three ui buttons">
-            <button className="massive ui button paragraph" onClick={this.toggleGraph}>2017</button>
-            <button className="massive ui button paragraph">2018</button>
-            <button className="massive ui button paragraph">2019</button>
+            <button className="massive ui button paragraph" onClick={()=> {
+              this.setState({
+                month: "September",
+                month_num: 8
+              });
+              this.toggleGraph();
+            }}>2017</button>
+            <button className="massive ui button paragraph" onClick={() => {
+              this.setState({
+                month: "October",
+                month_num: 9
+              });
+              this.toggleGraph();
+            }}>2018</button>
+            <button className="massive ui button paragraph" onClick={() => {
+              this.setState({
+                month: "November",
+                month_num: 10
+              });
+              this.toggleGraph();
+            }}>2019</button>
           </div>
 
         {/*Graph here*/}
-        { this.state.show && <Graph2017 json={this.state.data}/> }
+        { this.state.show && <Graph json={this.state.data} month={this.state.month} num={this.state.month_num}/> }
 
 
         </div>

@@ -3,12 +3,12 @@ import CanvasJSReact from "../assets/canvasjs.react";
 var CanvasJS = CanvasJSReact.CanvasJS;
 var CanvasJSChart = CanvasJSReact.CanvasJSChart;
 
-class Graph2017 extends React.Component {
+class Graph extends React.Component {
 
     render() {
 
         /* Filter data for crime incidents that happened in September */
-        const september = this.props.json.filter(e=>new Date(e.date).getMonth() === 8);
+        const data = this.props.json.filter(e=>new Date(e.date).getMonth() === this.props.num);
 
         /* Multiple variable assignment for counters of crime incidents */
         let accident, assault, auto, be, homicide, robbery, sexOffense, theft, vandalism;
@@ -16,7 +16,7 @@ class Graph2017 extends React.Component {
 
         /* Regex match string: ^[A-Z]+ */
         /* Find total of each crime incident in data */
-        september.forEach(function(item){
+        data.forEach(function(item){
             if(item.clearance_code_inc_type.startsWith("ACCIDENT")){
                 accident += 1;
             } else if (item.clearance_code_inc_type.startsWith("ASSAULT")){
@@ -45,7 +45,7 @@ class Graph2017 extends React.Component {
 			exportEnabled: true,
 			theme: "light2", //"light1", "light2", "dark1", "dark2"
 			title:{
-				text: "Crime Incidents in September 2019"
+				text: "Crime Incidents in " + this.props.month + " 2019"
 			},
 			data: [{
 				type: "column", //change type to bar, line, area, pie, column etc
@@ -77,4 +77,4 @@ class Graph2017 extends React.Component {
 	}
 }
 
-export default Graph2017;
+export default Graph;
