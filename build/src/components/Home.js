@@ -57,26 +57,25 @@ class Home extends React.Component{
                 month_num: 8
               });
               this.toggleGraph();
-            }}>2017</button>
+            }}>September</button>
             <button className="massive ui button paragraph" onClick={() => {
               this.setState({
                 month: "October",
                 month_num: 9
               });
               this.toggleGraph();
-            }}>2018</button>
+            }}>October</button>
             <button className="massive ui button paragraph" onClick={() => {
               this.setState({
                 month: "November",
                 month_num: 10
               });
               this.toggleGraph();
-            }}>2019</button>
+            }}>November</button>
           </div>
 
         {/*Graph here*/}
         { this.state.show && <Graph json={this.state.data} month={this.state.month} num={this.state.month_num}/> }
-
 
         </div>
       </div>

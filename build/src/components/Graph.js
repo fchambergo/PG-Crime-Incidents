@@ -67,7 +67,7 @@ class Graph extends React.Component {
 		}
 		
 		return (
-		<div>
+		<div className="graph-div">
 			<CanvasJSChart options = {options} 
                 /* onRef={ref => this.chart = ref} */
             />
