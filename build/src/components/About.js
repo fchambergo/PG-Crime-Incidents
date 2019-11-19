@@ -10,22 +10,24 @@ class About extends React.Component{
 
         <h3 className="header">This section will explain the information problem trying to be solved.</h3>
         <p className="paragraph">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat 
-        nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui 
-        officia deserunt mollit anim id est laborum.
+        Our application will help users to understand if there has been an increase 
+        of crime in Prince George's County in the past few years? The data will help us
+        to determind if there is a pattern to crime rates in the area? Which crime 
+        incidents occurred the most for each year? Which months of the year have the year 
+        does the most crime take place? Do some months exhimit higher crime rates than others?
+        Do some streets or sectors show higher crime rates than others? 
         </p>
 
         <h3 className="header">This section will explain the source of our dataset and our solution</h3>
         <p className="paragraph">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat 
-        nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui 
-        officia deserunt mollit anim id est laborum.
+        We decided to work with the "Crime Incidents February 2017 to Present" data set.
+        We obtained it from the PG County Public API. Our system and our data set will 
+        work together to create simple vizsualization. In order to prevent individuals 
+        from just simply viewing raw data, the system will aggregate relevant data and 
+        compile them into categorized screens. For example (Crime by area, crime by crime, 
+        crime over months, etc.) By providing a complete detail of when, where and how crime
+        is facilitated we hope to give residents of Prince George's County the full ability
+        to best avoid such activity.
         </p>
 
 
