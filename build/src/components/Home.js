@@ -42,12 +42,11 @@ class Home extends React.Component{
         <div className="ui home container">
           <h3 className="header">These sections will explain what the application is and what the problem solves</h3>
           <p className="paragraph">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat 
-          nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui 
-          officia deserunt mollit anim id est laborum.
+          As you can see we created a visualization across three months using canvasJS. 
+            When you click on the rows you can see each individual graph for the specific months over a period of time(Years).
+            These will be September, October, and Decemeber from 2017-2019. These graph will display the trends over a period of time, 
+            which also includes the types of crime involved. Our dataset will help our audience visualize the trends for
+            better understanding.Overall, with our system we hope to create a visualization of a graph where it displays a pattern over time. 
           </p>
 
           <div className="three ui buttons">
