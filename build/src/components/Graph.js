@@ -38,9 +38,24 @@ class Graph extends React.Component {
             }
         });
 
+        CanvasJS.addColorSet("sunsetShades",
+        [//colorSet Array
+
+        "#003f5c",
+        "#2f4b7c",
+        "#665191",
+        "#a05195",
+        "#d45087",
+        "#f95d6a",
+        "#ff7c43",
+        "#ffa600",
+        "#ffd100"
+    ]);
+
         /* Canvas JS Graph variables */
 		const options = {
             height: 500,
+            colorSet: "sunsetShades",
 			animationEnabled: true,
 			exportEnabled: true,
 			theme: "light2", //"light1", "light2", "dark1", "dark2"

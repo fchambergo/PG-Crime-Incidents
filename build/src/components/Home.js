@@ -1,5 +1,6 @@
 import React from 'react';
 import Graph from './Graph';
+
 import "../css/styles.css";
 
 class Home extends React.Component{
@@ -49,28 +50,98 @@ class Home extends React.Component{
             better understanding.Overall, with our system we hope to create a visualization of a graph where it displays a pattern over time. 
           </p>
 
-          <div className="three ui buttons">
-            <button className="massive ui button paragraph" onClick={()=> {
+          <div className="four ui buttons">
+          <button className="massive ui button paragraph" onClick={()=> {
               this.setState({
-                month: "September",
-                month_num: 8
+                month: "January",
+                month_num: 0
               });
               this.toggleGraph();
-            }}>September</button>
+            }}>January</button>
             <button className="massive ui button paragraph" onClick={() => {
               this.setState({
-                month: "October",
-                month_num: 9
+                month: "February",
+                month_num: 1
               });
               this.toggleGraph();
-            }}>October</button>
+            }}>February</button>
             <button className="massive ui button paragraph" onClick={() => {
               this.setState({
-                month: "November",
-                month_num: 10
+                month: "March",
+                month_num: 2
               });
               this.toggleGraph();
-            }}>November</button>
+            }}>March</button>
+            <div class="massive ui simple dropdown button">
+              <input name="month_num" type="hidden"/>
+              <div class="default text">Select month</div>
+              <i class="dropdown icon"></i>
+              <div class="menu">
+                <div class="item" onClick={() => {
+                    this.setState({
+                      month: "April",
+                      month_num: 3
+                    });
+                    this.toggleGraph();
+                  }}>April</div>
+                <div class="item" onClick={() => {
+                    this.setState({
+                      month: "May",
+                      month_num: 4
+                    });
+                    this.toggleGraph();
+                  }}>May</div>
+                <div class="item" onClick={() => {
+                    this.setState({
+                      month: "June",
+                      month_num: 5
+                    });
+                    this.toggleGraph();
+                }}>June</div>
+                <div class="item" onClick={() => {
+                  this.setState({
+                    month: "July",
+                    month_num: 6
+                  });
+                  this.toggleGraph();
+                }}>July</div>
+                <div class="item" onClick={() => {
+                  this.setState({
+                    month: "August",
+                    month_num: 7
+                  });
+                  this.toggleGraph();
+                }}>August</div>
+                <div class="item" onClick={() => {
+                  this.setState({
+                    month: "September",
+                    month_num: 8
+                  });
+                  this.toggleGraph();
+                }}>September</div>
+                <div class="item" onClick={() => {
+                  this.setState({
+                    month: "October",
+                    month_num: 9
+                  });
+                  this.toggleGraph();
+                }}>October</div>
+                <div class="item" onClick={() => {
+                  this.setState({
+                    month: "November",
+                    month_num: 10
+                  });
+                  this.toggleGraph();
+                }}>November</div>
+                <div class="item" onClick={() => {
+                  this.setState({
+                    month: "December",
+                    month_num: 11
+                  });
+                  this.toggleGraph();
+                }}>December</div>
+              </div>
+            </div>
           </div>
 
         {/*Graph here*/}
