@@ -34,7 +34,7 @@ class Documentation extends React.Component{
         With our dataset we used canvasJS to display our data visualization. This allowed us and the 
         audience to visual what types of crime are happening over time for each specific month and year. 
         We created a bar chart using canvasJS to display the number of crime that occurred each month within 
-        the year. This is a colorful visuailzation, which allows a better concept to view what is happening. 
+        the year. This is a colorful visuailzation, which allows a better concept to view what is happening over time. 
         </p>
 
         {/* Possible video here */}
