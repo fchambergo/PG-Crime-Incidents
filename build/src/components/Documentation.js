@@ -18,24 +18,36 @@ class Documentation extends React.Component{
         </p>
 
         {/* Insert Image here */}
-        <h3 className="header">This section will explain the step illustrated by the image</h3>
-        <p className="paragraph">
-        This photo is a picture of ReactJS. React is a an open source library for javascript and
-        it helped us to build our user interface. React has also helped us to created user 
-        interaction componenents to our project. We used react because it facilitated the process
-        for use to manipulate our application in the most efficient and flexible way as possible. 
-        React has the ability to update as your data changes. 
-        </p>
+        <div class="ui stackable grid">
+          <div class="four wide column">
+            <img className="ui fluid image" src={require('../static/react-logo.jpeg')} />
+          </div>
+          <div class="twelve wide column">
+            <h3 className="header">This section will explain the step illustrated by the image</h3>
+            <p className="paragraph">
+              This photo is a picture of ReactJS. React is a an open source library for javascript and
+              it helped us to build our user interface. React has also helped us to created user 
+              interaction componenents to our project. We used react because it facilitated the process
+              for use to manipulate our application in the most efficient and flexible way as possible. 
+              React has the ability to update as your data changes. 
+            </p>
+          </div>
+        </div>
 
-        
-        <h3 className="header">This section will explain the step illustrated by the image</h3>
-        <img src={require("../static/canvasjs.jpg")}/>
-        <p className="paragraph">
-        With our dataset we used canvasJS to display our data visualization. This allowed us and the 
-        audience to visual what types of crime are happening over time for each specific month and year. 
-        We created a bar chart using canvasJS to display the number of crime that occurred each month within 
-        the year. This is a colorful visuailzation, which allows a better concept to view what is happening over time. 
-        </p>
+        <div class="ui stackable grid">
+          <div class="four wide column">
+            <img className="ui fluid image" src={require('../static/canvasjs.jpg')} />
+          </div>
+          <div class="twelve wide column">
+            <h3 className="header">This section will explain the step illustrated by the image</h3>
+            <p className="paragraph">
+              With our dataset we used canvasJS to display our data visualization. This allowed us and the 
+              audience to visual what types of crime are happening over time for each specific month and year. 
+              We created a bar chart using canvasJS to display the number of crime that occurred each month within 
+              the year. This is a colorful visuailzation, which allows a better concept to view what is happening over time. 
+            </p>
+          </div>
+        </div>
 
         {/* Possible video here */}
       </div>
