@@ -83,7 +83,7 @@ class Home extends React.Component{
         { this.state.show && <Graph 
           json={this.state.data} 
           year={this.state.year} 
-          num={this.state.year_num}
+          year_num={this.state.year_num}
           month={this.state.month}
           month_num={this.state.month_num}
           /> }

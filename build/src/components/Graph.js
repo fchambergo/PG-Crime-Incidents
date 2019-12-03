@@ -8,9 +8,9 @@ class Graph extends React.Component {
     render() {
 
         /* Filter data for crime incidents that happened in September */
-        let data = this.props.json.filter(e=>new Date(e.date).getYear() == this.props.num);
+        let data = this.props.json.filter(e=>new Date(e.date).getYear() == this.props.year_num);
         if(this.props.month_num < 12){
-            data = this.props.json.filter(e=>new Date(e.date).getYear() == this.props.num && new Date(e.date).getMonth() == this.props.month_num);
+            data = this.props.json.filter(e=>new Date(e.date).getYear() == this.props.year_num && new Date(e.date).getMonth() == this.props.month_num);
         }
 
         /* Multiple variable assignment for counters of crime incidents */
