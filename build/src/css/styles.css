@@ -52,6 +52,11 @@
     margin-bottom: 6em;
 }
 
+.fluid.massive.ui.simple.dropdown.button {
+    margin-bottom: 1em;
+    text-align: center;
+}
+
 /* Home Page end */
 
 /* About Page start */
