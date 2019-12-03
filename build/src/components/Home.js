@@ -57,7 +57,8 @@ class Home extends React.Component{
               this.setState({
                 year: "2017",
                 year_num: 117,
-                month_num: 12
+                month_num: 12,
+                month: "All"
               });
               this.toggleGraph();
             }}>2017</button>
@@ -65,7 +66,8 @@ class Home extends React.Component{
               this.setState({
                 year: "2018",
                 year_num: 118,
-                month_num: 12
+                month_num: 12,
+                month: "All"
               });
               this.toggleGraph();
             }}>2018</button>
@@ -73,7 +75,8 @@ class Home extends React.Component{
               this.setState({
                 year: "2019",
                 year_num: 119,
-                month_num: 12
+                month_num: 12,
+                month: "All"
               });
               this.toggleGraph();
             }}>2019</button>
