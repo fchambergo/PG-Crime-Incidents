@@ -29,7 +29,7 @@ class Documentation extends React.Component{
 
         
         <h3 className="header">This section will explain the step illustrated by the image</h3>
-        <img src="../static/canvasjs.jpg" alt="canvasjs" width="200" height="150"></img>
+        <img src={require("../static/canvasjs.jpg")}/>
         <p className="paragraph">
         With our dataset we used canvasJS to display our data visualization. This allowed us and the 
         audience to visual what types of crime are happening over time for each specific month and year. 
