@@ -45,14 +45,16 @@ class Home extends React.Component{
         <div className="ui home container">
           <h3 className="header">Prince Georges County Data Visualization</h3>
           <p className="paragraph">
-            As you can see we created a visualization across three months using canvasJS. 
-            When you click on the rows you can see each individual graph for the specific months over a period of time(Years).
+            As you can see we created a visualization across three months using canvasJS.
+            To start the graph, select which year decided ton
             These will be September, October, and Decemeber from 2017-2019. These graph will display the trends over a period of time, 
             which also includes the types of crime involved. Our dataset will help our audience visualize the trends for
             better understanding.Overall, with our system we hope to create a visualization of a graph where it displays a pattern over time. 
+
+            To 
           </p>
 
-          <div className="three ui buttons">
+          <div className="four ui buttons">
             <button className="massive ui button paragraph" onClick={()=> {
               this.setState({
                 year: "2017",
@@ -80,18 +82,8 @@ class Home extends React.Component{
               });
               this.toggleGraph();
             }}>2019</button>
-          </div>
-
-        {/*Graph here*/}
-        { this.state.show && <Graph 
-          json={this.state.data} 
-          year={this.state.year} 
-          year_num={this.state.year_num}
-          month={this.state.month}
-          month_num={this.state.month_num}
-          /> }
-
-        <div class="fluid massive ui simple dropdown button">
+            
+            <div class="fluid big ui simple dropdown button">
             <div class="default text">Select Month</div>
             <div class="menu">
               
@@ -186,10 +178,18 @@ class Home extends React.Component{
                 });
                 this.toggleGraph();
               }}>December</div>
-
-
-            </div>
           </div>
+
+        {/*Graph here*/}
+        
+             </div>
+          </div>{ this.state.show && <Graph 
+          json={this.state.data} 
+          year={this.state.year} 
+          year_num={this.state.year_num}
+          month={this.state.month}
+          month_num={this.state.month_num}
+          /> }
         </div>
       </div>
     );
