@@ -8,7 +8,10 @@ class Graph extends React.Component {
     render() {
 
         /* Filter data for crime incidents that happened in September */
-        const data = this.props.json.filter(e=>new Date(e.date).getMonth() === this.props.num);
+        let data = this.props.json.filter(e=>new Date(e.date).getYear() == this.props.year_num);
+        if(this.props.month_num < 12){
+            data = this.props.json.filter(e=>new Date(e.date).getYear() == this.props.year_num && new Date(e.date).getMonth() == this.props.month_num);
+        }
 
         /* Multiple variable assignment for counters of crime incidents */
         let accident, assault, auto, be, homicide, robbery, sexOffense, theft, vandalism;
@@ -60,7 +63,7 @@ class Graph extends React.Component {
 			exportEnabled: true,
 			theme: "light2", //"light1", "light2", "dark1", "dark2"
 			title:{
-				text: "Crime Incidents in " + this.props.month + " 2019"
+				text: this.props.month + " Crime Incidents in " + this.props.year
 			},
 			data: [{
 				type: "column", //change type to bar, line, area, pie, column etc

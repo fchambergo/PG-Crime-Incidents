@@ -10,6 +10,8 @@ class Home extends React.Component{
     this.state = {
       data: [],
       show: false,
+      year: "",
+      year_num: 0,
       month: "",
       month_num: 0
     }
@@ -41,112 +43,153 @@ class Home extends React.Component{
         </div>
 
         <div className="ui home container">
-          <h3 className="header">These sections will explain what the application is and what the problem solves</h3>
+          <h3 className="header">Prince Georges County Data Visualization</h3>
           <p className="paragraph">
-          As you can see we created a visualization across three months using canvasJS. 
+            As you can see we created a visualization across three months using canvasJS. 
             When you click on the rows you can see each individual graph for the specific months over a period of time(Years).
             These will be September, October, and Decemeber from 2017-2019. These graph will display the trends over a period of time, 
             which also includes the types of crime involved. Our dataset will help our audience visualize the trends for
             better understanding.Overall, with our system we hope to create a visualization of a graph where it displays a pattern over time. 
           </p>
 
-          <div className="four ui buttons">
-          <button className="massive ui button paragraph" onClick={()=> {
+          <div className="three ui buttons">
+            <button className="massive ui button paragraph" onClick={()=> {
               this.setState({
-                month: "January",
-                month_num: 0
+                year: "2017",
+                year_num: 117,
+                month_num: 12,
+                month: "All"
               });
               this.toggleGraph();
-            }}>January</button>
+            }}>2017</button>
             <button className="massive ui button paragraph" onClick={() => {
               this.setState({
-                month: "February",
-                month_num: 1
+                year: "2018",
+                year_num: 118,
+                month_num: 12,
+                month: "All"
               });
               this.toggleGraph();
-            }}>February</button>
+            }}>2018</button>
             <button className="massive ui button paragraph" onClick={() => {
               this.setState({
-                month: "March",
-                month_num: 2
+                year: "2019",
+                year_num: 119,
+                month_num: 12,
+                month: "All"
               });
               this.toggleGraph();
-            }}>March</button>
-            <div class="massive ui simple dropdown button">
-              <input name="month_num" type="hidden"/>
-              <div class="default text">Select month</div>
-              <i class="dropdown icon"></i>
-              <div class="menu">
-                <div class="item" onClick={() => {
-                    this.setState({
-                      month: "April",
-                      month_num: 3
-                    });
-                    this.toggleGraph();
-                  }}>April</div>
-                <div class="item" onClick={() => {
-                    this.setState({
-                      month: "May",
-                      month_num: 4
-                    });
-                    this.toggleGraph();
-                  }}>May</div>
-                <div class="item" onClick={() => {
-                    this.setState({
-                      month: "June",
-                      month_num: 5
-                    });
-                    this.toggleGraph();
-                }}>June</div>
-                <div class="item" onClick={() => {
-                  this.setState({
-                    month: "July",
-                    month_num: 6
-                  });
-                  this.toggleGraph();
-                }}>July</div>
-                <div class="item" onClick={() => {
-                  this.setState({
-                    month: "August",
-                    month_num: 7
-                  });
-                  this.toggleGraph();
-                }}>August</div>
-                <div class="item" onClick={() => {
-                  this.setState({
-                    month: "September",
-                    month_num: 8
-                  });
-                  this.toggleGraph();
-                }}>September</div>
-                <div class="item" onClick={() => {
-                  this.setState({
-                    month: "October",
-                    month_num: 9
-                  });
-                  this.toggleGraph();
-                }}>October</div>
-                <div class="item" onClick={() => {
-                  this.setState({
-                    month: "November",
-                    month_num: 10
-                  });
-                  this.toggleGraph();
-                }}>November</div>
-                <div class="item" onClick={() => {
-                  this.setState({
-                    month: "December",
-                    month_num: 11
-                  });
-                  this.toggleGraph();
-                }}>December</div>
-              </div>
-            </div>
+            }}>2019</button>
           </div>
 
         {/*Graph here*/}
-        { this.state.show && <Graph json={this.state.data} month={this.state.month} num={this.state.month_num}/> }
+        { this.state.show && <Graph 
+          json={this.state.data} 
+          year={this.state.year} 
+          year_num={this.state.year_num}
+          month={this.state.month}
+          month_num={this.state.month_num}
+          /> }
 
+        <div class="fluid massive ui simple dropdown button">
+            <div class="default text">Select Month</div>
+            <div class="menu">
+              
+            <div class="item" onClick={() => {
+                this.setState({
+                  month: "All",
+                  month_num: 12
+                });
+                this.toggleGraph();
+              }}>All</div>
+              <div class="item" onClick={() => {
+                this.setState({
+                  month: "January",
+                  month_num: 0
+                });
+                this.toggleGraph();
+              }}>January</div>
+              <div class="item" onClick={() => {
+                this.setState({
+                  month: "February",
+                  month_num: 1
+                });
+                this.toggleGraph();
+              }}>February</div>
+              <div class="item" onClick={() => {
+                this.setState({
+                  month: "March",
+                  month_num: 2
+                });
+                this.toggleGraph();
+              }}>March</div>
+              <div class="item" onClick={() => {
+                this.setState({
+                  month: "April",
+                  month_num: 3
+                });
+                this.toggleGraph();
+              }}>April</div>
+              <div class="item" onClick={() => {
+                this.setState({
+                  month: "May",
+                  month_num: 4
+                });
+                this.toggleGraph();
+              }}>May</div>
+              <div class="item" onClick={() => {
+                this.setState({
+                  month: "June",
+                  month_num: 5
+                });
+                this.toggleGraph();
+              }}>June</div>
+              <div class="item" onClick={() => {
+                this.setState({
+                  month: "July",
+                  month_num: 6
+                });
+                this.toggleGraph();
+              }}>July</div>
+              <div class="item" onClick={() => {
+                this.setState({
+                  month: "August",
+                  month_num: 7
+                });
+                this.toggleGraph();
+              }}>August</div>
+              <div class="item" onClick={() => {
+                this.setState({
+                  month: "September",
+                  month_num: 8
+                });
+                this.toggleGraph();
+              }}>September</div>
+              <div class="item" onClick={() => {
+                this.setState({
+                  month: "October",
+                  month_num: 9
+                });
+                this.toggleGraph();
+              }}>October</div>
+              <div class="item" onClick={() => {
+                this.setState({
+                  month: "November",
+                  month_num: 10
+                });
+                this.toggleGraph();
+              }}>November</div>
+              <div class="item" onClick={() => {
+                this.setState({
+                  month: "December",
+                  month_num: 11
+                });
+                this.toggleGraph();
+              }}>December</div>
+
+
+            </div>
+          </div>
         </div>
       </div>
     );
