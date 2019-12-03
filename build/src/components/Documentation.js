@@ -27,22 +27,19 @@ class Documentation extends React.Component{
         React has the ability to update as your data changes. 
         </p>
 
-        {/* Insert Image here */}
+        
         <h3 className="header">This section will explain the step illustrated by the image</h3>
+        <img src={require("../static/canvasjs.jpg")}/>
         <p className="paragraph">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat 
-        nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui 
-        officia deserunt mollit anim id est laborum.
+        With our dataset we used canvasJS to display our data visualization. This allowed us and the 
+        audience to visual what types of crime are happening over time for each specific month and year. 
+        We created a bar chart using canvasJS to display the number of crime that occurred each month within 
+        the year. This is a colorful visuailzation, which allows a better concept to view what is happening over time. 
         </p>
 
         {/* Possible video here */}
       </div>
     );
   }
-
 }
-
 export default Documentation;
