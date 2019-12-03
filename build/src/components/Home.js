@@ -43,9 +43,9 @@ class Home extends React.Component{
         </div>
 
         <div className="ui home container">
-          <h3 className="header">These sections will explain what the application is and what the problem solves</h3>
+          <h3 className="header">Prince Georges County Data Visualization</h3>
           <p className="paragraph">
-          As you can see we created a visualization across three months using canvasJS. 
+            As you can see we created a visualization across three months using canvasJS. 
             When you click on the rows you can see each individual graph for the specific months over a period of time(Years).
             These will be September, October, and Decemeber from 2017-2019. These graph will display the trends over a period of time, 
             which also includes the types of crime involved. Our dataset will help our audience visualize the trends for
