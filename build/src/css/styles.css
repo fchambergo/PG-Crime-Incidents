@@ -24,7 +24,7 @@
     color: white;
     text-align: left;
     animation-name: anime;
-    animation-duration: 10s;
+    animation-duration: 30s;
 }
 
 .masthead h1.ui.header {
@@ -81,14 +81,24 @@
     font-size: 2em;
 }
 
+@keyframes parcolor{
+    from {color: white;}
+    to {color: black;}    
+}
+
+
 .paragraph {
     font-family: 'Oxygen', sans-serif;
     font-size: 1.5em;
+    animation-name: parcolor;
+    animation-duration: 40s;
 }
 
 .header {
     font-family: 'Viga', sans-serif;
     font-size: 1.5em;
     letter-spacing: 1px;
+    animation-name: parcolor;
+    animation-duration: 40s;
 }
 /* Shared end */
