@@ -9,7 +9,13 @@
 .main.segment{
     min-height: 60vh;
 }
-
+@keyframes anime {
+    0% {color: red;}
+    25%{color: yellow;}
+    50%{color: blue;}
+    75%{color: blueviolet;}
+    100%{color: magenta;}
+}
 .masthead p.ui.header {
     margin-top: 12em;
     margin-bottom: 0em;
@@ -17,6 +23,8 @@
     font-weight: normal;
     color: white;
     text-align: left;
+    animation-name: anime;
+    animation-duration: 10s;
 }
 
 .masthead h1.ui.header {
