@@ -1,11 +1,11 @@
 const express = require('express');
 const fetch = require('node-fetch');
-const path = require('path');
 
 const app = express();
 const port = process.env.PORT || 3000;
 
-app.use(express.static(__dirname + "/build"));
+app.use(express.static(__dirname));
+app.use(express.static(path.join(__dirname, 'build')))
 
 // app.get('*', (req, res) => {
 //   res.sendFile(path.resolve(__dirname, 'build', 'public', 'index.html'));
