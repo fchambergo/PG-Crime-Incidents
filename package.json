@@ -6,9 +6,8 @@
   "scripts": {
     "start": "node server.js",
     "server": "node server.js",
-    "build": "cd build && npm start",
+    "build": "cd client && npm start",
     "dev": "concurrently \"npm run server\" \"npm run build\"",
-    "heroku-postbuild": "npm install --prefix build && npm run build --prefix build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Group 7",
