@@ -5,11 +5,11 @@ const path = require('path');
 const app = express();
 const port = process.env.PORT || 3000;
 
-app.use(express.static(__dirname + "/build/src"));
+app.use(express.static(__dirname + "/build/src/components"));
 
-app.get('*', (req, res) => {
-  res.sendFile(path.resolve(__dirname, 'build', 'public', 'index.html'));
-})
+// app.get('*', (req, res) => {
+//   res.sendFile(path.resolve(__dirname, 'build', 'public', 'index.html'));
+// })
 
 // if(process.env.NODE_ENV === 'production'){
 //   app.use(express.static('build'));
@@ -40,7 +40,7 @@ app.get('/api', (req, res) => {
   });
 
 // app.get('*', (req, res) => {
-//   res.sendFile(path.join(__dirname = '/build/index.html'));
+//   res.sendFile(path.join(__dirname = '/build/public/index.html'));
 // })
 
 
