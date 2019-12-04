@@ -5,7 +5,7 @@ const app = express();
 const port = process.env.PORT || 5000;
 
 if (process.env.NODE_ENV === "production"){
-  app.use(express.static(_dirname));
+  app.use(express.static("/build"));
 }
 
 app.use(express.urlencoded({ extended: true }));
