@@ -43,15 +43,12 @@ class Home extends React.Component{
         </div>
 
         <div className="ui home container">
-          <h3 className="header animated fadeInLeft">Prince Georges County Data Visualization</h3>
+          <h3 className="header animated fadeInLeft">Prince George's County Crime Incident Data Visualization</h3>
           <p className="paragraph animated fadeInLeft">
-            As you can see we created a visualization across three months using canvasJS.
-            To start the graph, select which year decided ton
-            These will be September, October, and Decemeber from 2017-2019. These graph will display the trends over a period of time, 
-            which also includes the types of crime involved. Our dataset will help our audience visualize the trends for
-            better understanding.Overall, with our system we hope to create a visualization of a graph where it displays a pattern over time. 
-
-            To 
+            This visualization shows the total number of types of crime incidents that occurred in the Prince George's County area since February 2017 up till today.
+            The types of crime incidents include <b>Accidents</b>, <b>Assaults</b>, <b>Automobile</b> (Stolen), <b>Breaking and Entering</b>, <b>Homicides</b>, <b>Robbery</b>, <b>Sexual Offenses</b>, <b>Theft</b>, <b>Vandalism</b>.
+            This visualization helps compare the total number of crime incidents that occurred within each year from 2017. In order to dive deeper, we implemented a way to look in each month within each year.
+            This way, we can see a trend of the crime incidents within each year.
           </p>
 
           <div className="four ui buttons">
@@ -85,6 +82,7 @@ class Home extends React.Component{
             
             <div class="fluid big ui simple dropdown button">
             <div class="default text">Select Month</div>
+            <i class="dropdown icon"></i>
             <div class="menu">
               
             <div class="item" onClick={() => {
@@ -182,15 +180,16 @@ class Home extends React.Component{
 
         {/*Graph here*/}
         
-             </div>
-          </div>{ this.state.show && <Graph 
-          json={this.state.data} 
-          year={this.state.year} 
-          year_num={this.state.year_num}
-          month={this.state.month}
-          month_num={this.state.month_num}
-          /> }
+          </div>
         </div>
+                { this.state.show && <Graph 
+                  json={this.state.data} 
+                  year={this.state.year} 
+                  year_num={this.state.year_num}
+                  month={this.state.month}
+                  month_num={this.state.month_num}
+                /> }
+          </div>
       </div>
     );
   }
