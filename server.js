@@ -5,21 +5,12 @@ const path = require("path");
 const app = express();
 const port = process.env.PORT || 3000;
 
-// app.get('*', (req, res) => {
-//   res.sendFile(path.resolve(__dirname, 'build', 'public', 'index.html'));
-// })
-
-// if(process.env.NODE_ENV === 'production'){
-//   app.use(express.static('build'));
-// }
-
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 /* other url queries
 ALL DATA v
 https://data.princegeorgescountymd.gov/resource/wb4e-w4nf.json?$query=SELECT incident_case_id,date,clearance_code_inc_type LIMIT 68000
-
 
 */
 
@@ -38,7 +29,7 @@ app.get('/api', (req, res) => {
   });
 
 
-app.use(express.static('build'));
+app.use(express.static(__dirname + 'client/build'));
 
 app.get('*', (req, res) => {
   res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
