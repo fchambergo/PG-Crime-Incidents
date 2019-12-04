@@ -1,10 +1,11 @@
 const express = require('express');
 const fetch = require('node-fetch');
+const path = require('path');
 
 const app = express();
 const port = process.env.PORT || 5000;
 
-app.use(express.static("/build"));
+app.use(express.static(path.join(__dirname, "build")));
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
