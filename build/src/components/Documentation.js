@@ -20,7 +20,7 @@ class Documentation extends React.Component{
         {/* Insert Image here */}
         <div class="ui stackable grid">
           <div class="four wide column">
-            <img className="ui fluid image" src={require('../static/react-logo.jpeg')} />
+            <img className="ui fluid image animated fadeInLeft" src={require('../static/react-logo.jpeg')} />
           </div>
           <div class="twelve wide column">
             <h3 className="header">This section will explain the step illustrated by the image</h3>
@@ -36,7 +36,7 @@ class Documentation extends React.Component{
 
         <div class="ui stackable grid">
           <div class="four wide column">
-            <img className="ui fluid image" src={require('../static/canvasjs.jpg')} />
+            <img className="ui fluid image animated fadeInLeft" src={require('../static/canvasjs.jpg')} />
           </div>
           <div class="twelve wide column">
             <h3 className="header">This section will explain the step illustrated by the image</h3>

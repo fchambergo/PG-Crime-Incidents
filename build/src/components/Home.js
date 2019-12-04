@@ -43,8 +43,8 @@ class Home extends React.Component{
         </div>
 
         <div className="ui home container">
-          <h3 className="header">Prince Georges County Data Visualization</h3>
-          <p className="paragraph">
+          <h3 className="header animated fadeInLeft">Prince Georges County Data Visualization</h3>
+          <p className="paragraph animated fadeInLeft">
             As you can see we created a visualization across three months using canvasJS.
             To start the graph, select which year decided ton
             These will be September, October, and Decemeber from 2017-2019. These graph will display the trends over a period of time, 

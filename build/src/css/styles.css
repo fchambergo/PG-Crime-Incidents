@@ -9,13 +9,7 @@
 .main.segment{
     min-height: 60vh;
 }
-@keyframes anime {
-    0% {color: red;}
-    25%{color: yellow;}
-    50%{color: blue;}
-    75%{color: blueviolet;}
-    100%{color: magenta;}
-}
+
 .masthead p.ui.header {
     margin-top: 12em;
     margin-bottom: 0em;
@@ -23,8 +17,6 @@
     font-weight: normal;
     color: white;
     text-align: left;
-    animation-name: anime;
-    animation-duration: 10s;
 }
 
 .masthead h1.ui.header {
@@ -72,6 +64,10 @@
 /* About Page end */
 
 /* Documentation Page start */
+.ui.fluid.image {
+    height: 14em;
+    width: 16rem;
+}
 
 /* Documentation Page end */
 
@@ -84,6 +80,7 @@
 .paragraph {
     font-family: 'Oxygen', sans-serif;
     font-size: 1.5em;
+    line-height: 1.8;
 }
 
 .header {
@@ -92,3 +89,40 @@
     letter-spacing: 1px;
 }
 /* Shared end */
+
+/* Animation */
+.animated{
+    -webkit-animation-duration:3s;
+    animation-duration:3s;
+    -webkit-animation-fill-mode:both;
+    animation-fill-mode:both
+}
+
+@-webkit-keyframes fadeInLeft{
+    0%{
+        opacity:0;
+        -webkit-transform:translateX(-200px);
+        transform:translateX(-200px)}
+    100%{
+        opacity:1;
+        -webkit-transform:translateX(0);
+        transform:translateX(0)
+    }
+}
+@keyframes fadeInLeft{
+    0%{
+        opacity:0;
+        -webkit-transform:translateX(-200px);
+        -ms-transform:translateX(-200px);
+        transform:translateX(-200px)}
+    100%{
+        opacity:1;
+        -webkit-transform:translateX(0);
+        -ms-transform:translateX(0);
+        transform:translateX(0)
+    }
+}
+.fadeInLeft{
+    -webkit-animation-name:fadeInLeft;
+    animation-name:fadeInLeft
+}
