@@ -1,10 +1,6 @@
 {
   "name": "pg-crime-incidents",
   "version": "1.0.0",
-  "engines": {
-    "node": "10.15.0",
-    "npm": "6.4.1"
-  },
   "description": "PG Crime Incidents Boilerplate Express and React",
   "main": "server.js",
   "scripts": {
