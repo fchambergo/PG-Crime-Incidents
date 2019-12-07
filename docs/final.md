@@ -20,25 +20,25 @@ Link: https://data.princegeorgescountymd.gov/Public-Safety/Crime-Incidents-Febru
 In order to answer our question, we had to figure out a way to compare the crime incidents over the years. Therefore, we decided to use a data visualization that displays the total number of crime incidents per crime incident type for each month in each year.
 
 **Technical system decision rationale**:
-For this project, we decided to use a variety of technologies. The technologies implemented *Semantic UI*, *React.js*, and *Canvas.js*
+For this project, we decided to use a variety of technologies. The technologies implemented include *Semantic UI*, *React.js*, and *Canvas.js*
 
-We used *Semantic UI* to make our application much more responsive and it has easy to follow/read documentation. It helped make our tasks on CSS much simpler.
+We used *Semantic UI* to make our application much more responsive. It has easy to follow/read documentation. It helped make our tasks on CSS much simpler.
 
 We used *React.js* to create the foundation of our project. It was a good learning experience for us all since it is one of the most popular and widely used javascript libraries.
 
 Lastly, we used *Canvas.js* to create our graphs and display our data. It had clear documentation and examples on its website to follow.
 
 **How/if your final system helps to address the problem**:
-We believe our final system helps address our problem since the key component to solving it is to make comparisons of the crime incidents over the years. The graph does exactly that. A user can visually see the change in crime incidents by looking at the graph.
+We believe our final system helps address our problem since the key component to solving it is to make comparisons of the crime incidents over the years. The graph does exactly that. A user can visually see the change in crime incidents by looking at the outputs of the graph.
 
 **Challenges faced and impact on final design**:
 Firstly, we had a tough challenge of loading our data without making the application load slowly. Our dataset is big  and it made the performance less than ideal. However, we queried the data to return only the necessary variables to form a graph.
 
 Secondly, we had difficulty in using the data to create a line graph which was part of our initial design but we found that it was much simpler to create a bar graph to answer the same question. Making the data visualization a bar graph made our application much more interactive with the user since the user has the choice to pick the year and month they want to view.
 
-Lastly, we had a major difficult time with Heroku. We are not that experienced with it so our application took a little while longer to deploy. Thanks to a lot of online resources and tutorials, the site is up and running
+Lastly, we had a major difficult time with Heroku. We are not that experienced with it so our application took a little while longer to deploy. Thanks to a lot of online resources and tutorials, the site is up and running.
 
 **Possible future work directions with this problem**:
-Now that we have the data and can visually compare it, we can do a deeper dive analyzing the incidents and their cause. Perhaps there was a concurrent event that happened at the same time as theses incidents that encouraged people to perform these crime incidents. Police departments can look at the data and see what incidents they should be more on the lookout for.
+Now that we have the data and can visually compare it, we can do a deeper dive analyzing the incidents and their cause. Perhaps there was a concurrent event that happened at the same time as these incidents that encouraged people to perform them. Police departments can look at the data and see what incidents they should be more on the lookout for.
 
-Our dataset had other variables that we did not use. These variables included coordinates and street names that can help a user see where exactly these crime incidents take place as well. Using this information, our next steps would be to include a map that has labeled the crime incidents in each sector of the map. Residents would want to be aware of where the most frequent incidents occur so they can be more cautious when they are in those areas. 
+Our dataset had other variables that we did not use. These variables included coordinates and street names that can help a user see where exactly these crime incidents take place. Using this information, our next steps would be to include a map that has labeled the crime incidents in each sector of the map. Residents would want to be aware of where the most frequent incidents occur so they can be more cautious when they are in those areas. 
