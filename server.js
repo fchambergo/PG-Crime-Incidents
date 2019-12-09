@@ -14,7 +14,7 @@ https://data.princegeorgescountymd.gov/resource/wb4e-w4nf.json?$query=SELECT inc
 
 */
 
-
+/* Fetch data from API */
 app.get('/api', (req, res) => {
     const baseURL = "https://data.princegeorgescountymd.gov/resource/wb4e-w4nf.json?$query=SELECT incident_case_id,date,clearance_code_inc_type LIMIT 68000";
     fetch(baseURL)
@@ -28,7 +28,7 @@ app.get('/api', (req, res) => {
       });
   });
 
-
+/* Static files */
 app.use(express.static('client/build'));
 
 if(process.env.NODE_ENV === 'production'){
