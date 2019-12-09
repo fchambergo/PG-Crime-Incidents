@@ -12,9 +12,9 @@ Link: https://pgcrimeincidents.herokuapp.com/
 
 Description of Target Browsers: This web application is primarily targeted to Desktop internet browsers. It was implemented in this manner due to the assumption that majority of the users that will be displaying/presenting this web application will be in an office/professional environment (i.e. using a desktop computer).
 
-Link to Developers Manual: Use Heroku link to access or See instructions below. 
+Link to Users Manual: [I'm a relative reference to a repository file](./docs/user.md)
 
-Link to Users Manual: Use Heroku link to access or See instructions below. 
+Link to Developers Manual: Use Heroku link to access or See instructions below. 
 
 Instructions to use the Project:
  1) Clone the repository
