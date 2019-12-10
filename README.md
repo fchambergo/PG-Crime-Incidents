@@ -22,7 +22,7 @@ Using the information from the dataset, we created a data visualization that cal
  3) In Terminal run:
  - `npm install react-scripts --save`
  - `npm install --save react`
- - `npm install -- react-dom`
+ - `npm install --save react-dom`
  3) Run `npm run dev` which will open a browser from React on http://localhost:3000
  4) If you want to look at the data being displayed: open another tab in your browser and go to http://localhost:5000
 
