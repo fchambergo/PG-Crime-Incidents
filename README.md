@@ -18,7 +18,11 @@ Using the information from the dataset, we created a data visualization that cal
 
 <b>Instructions to use the Project</b>:
  1) Clone the repository
- 2) Open Terminal in the file location and run: <b>npm install</b> to install the needed dependencies
- 3) Run <b>npm run dev</b> which will open a browser from React on http://localhost:3000
+ 2) Open Terminal in the file location and run: `npm install` to install the needed dependencies
+ 3) In Terminal run:
+ - `npm install react-scripts --save`
+ - `npm install --save react`
+ - `npm install -- react-dom`
+ 3) Run `npm run dev` which will open a browser from React on http://localhost:3000
  4) If you want to look at the data being displayed: open another tab in your browser and go to http://localhost:5000
 
