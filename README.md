@@ -37,16 +37,16 @@ Using the information from the dataset, we created a data visualization that cal
      - react-scripts `npm install --save react-scripts` - installs react needed scripts
 
 
- 4) Go to the `PG-Crime-Incidents folder` folder in your terminal and run `npm run dev` which will start the application and open a browser from React on your http://localhost:3000. To see the data being returned from the API, it can be seen on http://localhost:5000/api
+ 4) Go to the `PG-Crime-Incidents` folder in your terminal and run `npm run dev` which will start the application and open a browser from React on your http://localhost:3000. To see the data being returned from the API, it can be seen on http://localhost:5000/api
 
  <b>API Endpoint</b>
  This application only utilizes a `GET` endpoint. The `GET` endpoint in the application calls data from the Prince George's County Open Data API for Crime Incidents from February 2017 - Present. The endpoint is queried to return the necessary variables needed from the API to construct the graph.
 
 <b>Known Bugs</b>
 - Our data only goes as far back as February 2017. Therefore, if the user selects the month January from 2017, the graph will display nothing as no data exists there.
-- This dataset is constantly being updated every week. If the user is trying to pulls data during the beginning of the month (within the first 7 days), the graph may not display data as the dataset hasn't formed any data for that month yet. It is too soon in the new month. 
+- This dataset is constantly being updated every week. If the user is trying to pull data during the beginning of the month (within the first 7 days), the graph may not display data as the dataset hasn't formed any data for that month yet. It is too soon in the new month. 
 
 <b>Future Development</b>
-- Add some more styling to enhance the user experience and appearance of the application
+- Add some more styling to enhance the user experience and appearance of the application.
 - Our dataset has other variables including coordinates and geographical locations of Prince George's County of where the crime incidents take place. In the future, we may construct a map using that information to continue in solving problems and questions for the residents and police department of Prince George's County. 
 
