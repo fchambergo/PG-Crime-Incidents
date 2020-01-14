@@ -51,37 +51,54 @@ class Home extends React.Component{
             This way, we can see a trend of the crime incidents within each year.
           </p>
 
-          <div className="four ui buttons">
-            <button className="massive ui button paragraph" onClick={()=> {
-              this.setState({
-                year: "2017",
-                year_num: 117,
-                month_num: 12,
-                month: "All"
-              });
-              this.toggleGraph();
-            }}>2017</button>
-            <button className="massive ui button paragraph" onClick={() => {
-              this.setState({
-                year: "2018",
-                year_num: 118,
-                month_num: 12,
-                month: "All"
-              });
-              this.toggleGraph();
-            }}>2018</button>
-            <button className="massive ui button paragraph" onClick={() => {
-              this.setState({
-                year: "2019",
-                year_num: 119,
-                month_num: 12,
-                month: "All"
-              });
-              this.toggleGraph();
-            }}>2019</button>
-            
+          <div className="two ui buttons">
+
+            {/*Years dropdown */}
+            <div className="fluid big ui simple dropdown button">
+              <div className="default text">Year</div>
+              <i className="dropdown icon"></i>
+              <div className="menu">
+                <div className="item" onClick={()=> {
+                  this.setState({
+                    year: "2017",
+                    year_num: 117,
+                    month_num: 12,
+                    month: "All"
+                    });
+                  this.toggleGraph();
+                  }}>2017</div>
+                <div className="item" onClick={() => {
+                  this.setState({
+                    year: "2018",
+                    year_num: 118,
+                    month_num: 12,
+                    month: "All"
+                    });
+                  this.toggleGraph();
+                  }}>2018</div>
+                <div className="item" onClick={() => {
+                  this.setState({
+                    year: "2019",
+                    year_num: 119,
+                    month_num: 12,
+                    month: "All"
+                    });
+                  this.toggleGraph();
+                  }}>2019</div>
+                <div className="item" onClick={() => {
+                  this.setState({
+                    year: "2020",
+                    year_num: 120,
+                    month_num: 12,
+                    month: "All"
+                    });
+                  }}>2020</div>
+              </div>
+            </div>
+
+            {/*Months dropdown*/}
             <div class="fluid big ui simple dropdown button">
-            <div class="default text">Select Month</div>
+            <div class="default text">Month</div>
             <i class="dropdown icon"></i>
             <div class="menu">
               
@@ -177,11 +194,10 @@ class Home extends React.Component{
                 this.toggleGraph();
               }}>December</div>
           </div>
-
-        {/*Graph here*/}
-        
           </div>
-        </div>
+          </div>
+
+           {/*Graph*/}
                 { this.state.show && <Graph 
                   json={this.state.data} 
                   year={this.state.year} 
@@ -190,7 +206,10 @@ class Home extends React.Component{
                   month_num={this.state.month_num}
                 /> }
           </div>
+
       </div>
+
+      
     );
   }
 
