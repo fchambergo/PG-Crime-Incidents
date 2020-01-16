@@ -7,37 +7,76 @@ class Graph extends React.Component {
 
     render() {
 
-        /* Filter data for crime incidents that happened in September */
+        /* Filter data for crime incidents that happened in given year*/
         let data = this.props.json.filter(e=>new Date(e.date).getYear() == this.props.year_num);
-        if(this.props.month_num < 12){
-            data = this.props.json.filter(e=>new Date(e.date).getYear() == this.props.year_num && new Date(e.date).getMonth() == this.props.month_num);
-        }
+        // if(this.props.month_num < 12){
+        //     data = this.props.json.filter(e=>new Date(e.date).getYear() == this.props.year_num && new Date(e.date).getMonth() == this.props.month_num);
+        // }
 
         /* Multiple variable assignment for counters of crime incidents */
         let accident, assault, auto, be, homicide, robbery, sexOffense, theft, vandalism;
-        accident = assault = auto = be = homicide = robbery = sexOffense = theft = vandalism = 0;
+        accident = assault = auto = be = homicide = robbery = sexOffense = theft = vandalism = {};
 
         /* Regex match string: ^[A-Z]+ */
         /* Find total of each crime incident in data */
         data.forEach(function(item){
+            
+            month = new Date(item).getMonth();
+
             if(item.clearance_code_inc_type.startsWith("ACCIDENT")){
-                accident += 1;
+                if(month in accident){
+                    accident[month] += 1;
+                } else {
+                    accident[month] = 1;
+                }
             } else if (item.clearance_code_inc_type.startsWith("ASSAULT")){
-                assault += 1;
+                if (month in assault){
+                    assault[month] += 1;
+                } else {
+                    assault[month] = 1;
+                }
             } else if (item.clearance_code_inc_type.startsWith("AUTO")){
-                auto += 1;
+                if (month in auto){
+                    auto[month] += 1;
+                } else {
+                    auto[month] = 1;
+                }
             } else if (item.clearance_code_inc_type.startsWith("B & E")){
-                be += 1;
+                if (month in be){
+                    be[month] += 1;
+                } else {
+                    be[month] = 1;
+                }
             } else if (item.clearance_code_inc_type.startsWith("HOMICIDE")){
-                homicide += 1;
+                if (month in homicide){
+                    homicide[month] += 1;
+                } else {
+                    homicide[month] = 1;
+                }
             } else if (item.clearance_code_inc_type.startsWith("ROBBERY")){
-                robbery += 1;
+                if (month in robbery){
+                    robbery[month] += 1;
+                } else {
+                    robbery[month] = 1;
+                }
             } else if (item.clearance_code_inc_type.startsWith("SEX")){
-                sexOffense += 1;
+                if (month in sexOffense){
+                    sexOffense[month] += 1;
+                } else {
+                    sexOffense[month] = 1;
+                }
             } else if (item.clearance_code_inc_type.startsWith("THEFT")){
-                theft += 1;
+                if (month in theft){
+                    theft[month] += 1;
+                } else {
+                    theft[month] = 1;
+                }
             } else if (item.clearance_code_inc_type.startsWith("VANDALISM")){
-                vandalism += 1;
+                if (month in vandalism){
+                    vandalism[month] += 1;
+                } else {
+                    vandalism[month] = 1;
+                }
             }
         });
 
