@@ -54,7 +54,7 @@ class Home extends React.Component{
           <div className="two ui buttons">
 
             {/*Years dropdown */}
-            <div className="fluid big ui simple dropdown button">
+            <div className="fluid big ui secondary basic simple dropdown button">
               <div className="default text">Year</div>
               <i className="dropdown icon"></i>
               <div className="menu">
@@ -95,106 +95,6 @@ class Home extends React.Component{
                   }}>2020</div>
               </div>
             </div>
-
-            {/*Months dropdown*/}
-            <div class="fluid big ui simple dropdown button">
-            <div class="default text">Month</div>
-            <i class="dropdown icon"></i>
-            <div class="menu">
-              
-            <div class="item" onClick={() => {
-                this.setState({
-                  month: "All",
-                  month_num: 12
-                });
-                this.toggleGraph();
-              }}>All</div>
-              <div class="item" onClick={() => {
-                this.setState({
-                  month: "January",
-                  month_num: 0
-                });
-                this.toggleGraph();
-              }}>January</div>
-              <div class="item" onClick={() => {
-                this.setState({
-                  month: "February",
-                  month_num: 1
-                });
-                this.toggleGraph();
-              }}>February</div>
-              <div class="item" onClick={() => {
-                this.setState({
-                  month: "March",
-                  month_num: 2
-                });
-                this.toggleGraph();
-              }}>March</div>
-              <div class="item" onClick={() => {
-                this.setState({
-                  month: "April",
-                  month_num: 3
-                });
-                this.toggleGraph();
-              }}>April</div>
-              <div class="item" onClick={() => {
-                this.setState({
-                  month: "May",
-                  month_num: 4
-                });
-                this.toggleGraph();
-              }}>May</div>
-              <div class="item" onClick={() => {
-                this.setState({
-                  month: "June",
-                  month_num: 5
-                });
-                this.toggleGraph();
-              }}>June</div>
-              <div class="item" onClick={() => {
-                this.setState({
-                  month: "July",
-                  month_num: 6
-                });
-                this.toggleGraph();
-              }}>July</div>
-              <div class="item" onClick={() => {
-                this.setState({
-                  month: "August",
-                  month_num: 7
-                });
-                this.toggleGraph();
-              }}>August</div>
-              <div class="item" onClick={() => {
-                this.setState({
-                  month: "September",
-                  month_num: 8
-                });
-                this.toggleGraph();
-              }}>September</div>
-              <div class="item" onClick={() => {
-                this.setState({
-                  month: "October",
-                  month_num: 9
-                });
-                this.toggleGraph();
-              }}>October</div>
-              <div class="item" onClick={() => {
-                this.setState({
-                  month: "November",
-                  month_num: 10
-                });
-                this.toggleGraph();
-              }}>November</div>
-              <div class="item" onClick={() => {
-                this.setState({
-                  month: "December",
-                  month_num: 11
-                });
-                this.toggleGraph();
-              }}>December</div>
-          </div>
-          </div>
           </div>
 
            {/*Graph*/}
