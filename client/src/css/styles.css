@@ -60,6 +60,9 @@
 /* Home Page end */
 
 /* About Page start */
+.paragraph.animated.fadeInLeft {
+    margin-bottom: 2em;
+}
 
 /* About Page end */
 
@@ -67,6 +70,10 @@
 .ui.fluid.image {
     height: 14em;
     width: 17em;
+}
+
+.ui.stackable.grid {
+    margin-bottom: 2em;
 }
 
 /* Documentation Page end */
@@ -81,6 +88,7 @@
     font-family: 'Oxygen', sans-serif;
     font-size: 1.5em;
     line-height: 1.8;
+    margin-bottom: 2em;
 }
 
 .header {
