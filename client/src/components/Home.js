@@ -11,9 +11,7 @@ class Home extends React.Component{
       data: [],
       show: false,
       year: "",
-      year_num: 0,
-      month: "",
-      month_num: 0
+      year_num: 0
     }
 
     this.toggleGraph = this.toggleGraph.bind(this)
@@ -61,36 +59,28 @@ class Home extends React.Component{
                 <div className="item" onClick={()=> {
                   this.setState({
                     year: "2017",
-                    year_num: 117,
-                    month_num: 12,
-                    month: "All"
+                    year_num: 117
                     });
                   this.toggleGraph();
                   }}>2017</div>
                 <div className="item" onClick={() => {
                   this.setState({
                     year: "2018",
-                    year_num: 118,
-                    month_num: 12,
-                    month: "All"
+                    year_num: 118
                     });
                   this.toggleGraph();
                   }}>2018</div>
                 <div className="item" onClick={() => {
                   this.setState({
                     year: "2019",
-                    year_num: 119,
-                    month_num: 12,
-                    month: "All"
+                    year_num: 119
                     });
                   this.toggleGraph();
                   }}>2019</div>
                 <div className="item" onClick={() => {
                   this.setState({
                     year: "2020",
-                    year_num: 120,
-                    month_num: 12,
-                    month: "All"
+                    year_num: 120
                     });
                   }}>2020</div>
               </div>
