@@ -16,8 +16,9 @@ https://data.princegeorgescountymd.gov/resource/wb4e-w4nf.json?$query=SELECT inc
 
 /* Fetch data from API */
 app.get('/api', (req, res) => {
-    const baseURL = "https://data.princegeorgescountymd.gov/resource/wb4e-w4nf.json?$query=SELECT incident_case_id,date,clearance_code_inc_type LIMIT 68000";
-    fetch(baseURL)
+    const baseURL = "https://data.princegeorgescountymd.gov/resource/wb4e-w4nf.json?"; //Base URL for API
+    var API_query = "$query=SELECT incident_case_id,date,clearance_code_inc_type LIMIT 68000"; //API Query to select certain information. Filters out what is not needed
+    fetch(baseURL + API_query)
       .then((res) => res.json())
       .then((data) => {
         res.send({ data: data });
