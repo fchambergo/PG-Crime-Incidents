@@ -1,5 +1,6 @@
 import React from 'react';
 import Graph from './Graph';
+import ChartGraph from "./ChartGraph";
 
 import "../css/styles.css";
 
