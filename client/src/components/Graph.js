@@ -9,6 +9,7 @@ class Graph extends React.Component {
 
         /* Filter data for crime incidents that happened in given year - prop*/
         let data = this.props.json.filter(e=>new Date(e.date).getYear() == this.props.year_num);
+        console.log(data)
 
         /* Declare array for each crime incident */
         var accident = [];

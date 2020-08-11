@@ -52,6 +52,8 @@ class Home extends React.Component{
             This way, we can see a trend of the crime incidents within each year.
           </p>
 
+          <ChartGraph></ChartGraph>
+
           <div className="two ui buttons">
 
             {/*Years dropdown */}
